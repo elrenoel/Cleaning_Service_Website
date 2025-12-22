@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@layer utilities {
+  .font-jakarta {
+    font-family: "Plus Jakarta Sans", sans-serif;
+  }
+
+  .font-outfit {
+    font-family: "Outfit", sans-serif;
+  }
+}
