@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="tailwind.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+      (function(){
+          emailjs.init({
+            publicKey: "0dElcSJYi-ct9JYUa",
+          });
+      })();
+    </script>
+</head>
+<body>
+    <section class="bg-[#2563EB] px-[6%] flex flex-col justify-center items-center py-10 relative">
+      <img src="assets/icons/Mask group (6).png" alt="" class="absolute left-50 top-10">
+      <img src="assets/icons/Mask group (7).png" alt="" class="absolute right-50 top-20">
+      <div class="flex items-center justify-between w-full px-[20%]">
+        <h3 class="text-4xl text-[#d9d9d9] font-semibold font-outfit">
+          CleanEase
+        </h3>
+        <a href="index.html" class="text-[#d9d9d9] hover:text-[#F97316] hover:underline">Back Home</a>
+      </div>
+      <form class="mt-8 bg-[#ffffff] w-170 p-7.5 rounded-[20px]" onsubmit="sendEmail(event)">
+        <h3 class="text-[32px] font-semibold text-center mb-5">Start Booking</h3>
+        <h3 class="text-2xl font-semibold">Book Your Cleaning Service</h3>
+        <p class="font-medium text-[16px] mt-2 mb-8">
+          Fill out the form below and our team will confirm your appointment.
+        </p>
+        <div class="flex flex-col">
+          <label for="name" class="text-[20px] font-medium">Name</label>
+          <input type="text" placeholder="Type your name" name="name" id="name" class="outline-0 mt-1 py-3 px-1.5 bg-[#F7F7FF] rounded-lg"/>
+        </div>
+        <div class="flex flex-col mt-2">
+          <label for="email" class="text-[20px] font-medium">Email</label>
+          <input type="email" placeholder="Type your email" name="email" id="email" class="outline-0 mt-1 py-3 px-1.5 bg-[#F7F7FF] rounded-lg"/>
+        </div>
+        <div class="flex flex-col mt-2">
+          <label for="phone-number" class="text-[20px] font-medium">Phone Number</label>
+          <input
+            type="number"
+            placeholder="Type your phone number"
+            name="phone-number"
+            id="phone-number"
+            class="outline-0 mt-1 py-3 px-1.5 bg-[#F7F7FF] rounded-lg"
+          />
+        </div>
+        <div class="flex flex-col mt-2">
+          <p class="text-[20px] font-medium">Service Type</p>
+          <select id="serviceType" class="bg-[#F7F7FF] rounded-lg outline-0 mt-1 py-3 px-1.5">
+            <option value="">Select service type</option>
+            <option value="1">Basic</option>
+            <option value="2">Standard</option>
+            <option value="3">Premium</option>
+          </select>
+        </div>
+        <div class="flex flex-col mt-2">
+          <label for="address" class="text-[20px] font-medium">Your Address</label>
+          <input type="text" placeholder="Type your address" name="address" id="address" class="outline-0 mt-1 py-3 px-1.5 bg-[#F7F7FF] rounded-lg"/>
+        </div>
+        <div class="flex flex-col mt-2">
+        <p class="text-[20px] font-medium">Property Size</p>
+        <div class="flex gap-4 mt-2">
+          <label class="flex-1 cursor-pointer">
+            <input
+              type="radio"
+              name="property"
+              value="Studio / 1 Bedroom"
+              class="hidden peer"
+            >
+            <div
+              class="bg-[#F0F0F0] text-black rounded-lg py-3 text-center
+                    peer-checked:bg-blue-600
+                    peer-checked:text-[#d9d9d9]
+                    transition">
+              Studio / 1 Bedroom
+            </div>
+          </label>
+
+          <label class="flex-1 cursor-pointer">
+            <input
+              type="radio"
+              name="property"
+              value="2–3 Bedrooms"
+              class="hidden peer"
+            >
+            <div
+              class="bg-[#F0F0F0] text-black rounded-lg py-3 text-center
+                    peer-checked:bg-blue-600
+                    peer-checked:text-[#d9d9d9]
+                    transition">
+              2–3 Bedrooms
+            </div>
+          </label>
+
+          <label class="flex-1 cursor-pointer">
+            <input
+              type="radio"
+              name="property"
+              value="4+ Bedrooms / Office"
+              class="hidden peer"
+            >
+            <div
+              class="bg-[#F0F0F0] text-black rounded-lg py-3 text-center
+                    peer-checked:bg-blue-600
+                    peer-checked:text-[#d9d9d9]
+                    transition">
+              4+ Bedrooms / Office
+            </div>
+          </label>
+        </div>
+      </div>
+
+        </div>
+        <div class="flex gap-4 mt-3">
+          <div class="flex flex-col flex-1">
+            <label for="date" class="text-[20px] font-medium">Preferred Date</label>
+            <input type="date" name="date" id="date" class="outline-0 mt-1 py-3 px-1.5 bg-[#F7F7FF] rounded-lg"/>
+          </div>
+          <div class="flex flex-col flex-1">
+            <label for="time" class="text-[20px] font-medium">Preferred Time</label>
+            <input type="text" placeholder="type here (ex. 9 AM)" name="time" id="time" class="outline-0 mt-1 py-3 px-1.5 bg-[#F7F7FF] rounded-lg"/>
+          </div>
+        </div>
+        <button type="submit" class="mt-8 w-full bg-[#2859C5] text-[#d9d9d9] text-xl font-semibold rounded-lg py-3">Confirm Booking</button>
+      </form>
+      <img src="assets/icons/Mask group (1).png" alt="" class="absolute left-45 bottom-30">
+      <img src="assets/icons/Mask group.png" alt="" class="absolute right-45 bottom-10">
+    </section>
+    <script src="sendEmail.js"></script>
+</body>
+</html>
