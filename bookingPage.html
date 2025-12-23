@@ -23,18 +23,16 @@
     </script>
 </head>
 <body>
-    <section class="bg-[#2563EB] px-[6%] flex flex-col justify-center items-center py-10 relative">
-      <img src="assets/icons/Mask group (6).png" alt="" class="absolute left-50 top-10 hidden xl:block">
-      <img src="assets/icons/Mask group (7).png" alt="" class="absolute right-50 top-20 hidden xl:block">
-      <div class="flex items-center justify-between w-full px-[6%] lg:px-[20%]">
-        <h3 class="text-4xl text-[#d9d9d9] font-semibold font-outfit">
+    <section class="bg-[#2563EB] flex flex-col justify-center items-center pt-10 relative">
+      <div class="flex items-center justify-between w-full px-[6%]">
+        <h3 class="text-2xl lg:text-4xl text-[#d9d9d9] font-semibold font-outfit">
           CleanEase
         </h3>
         <a href="index.html" class="text-[#d9d9d9] hover:text-[#F97316] hover:underline">Back Home</a>
       </div>
-      <form class="mt-8 bg-[#ffffff] w-100 md:w-170 p-7.5 rounded-[20px]" onsubmit="sendEmail(event)">
+      <form class="mt-8 bg-[#ffffff] w-full p-5" onsubmit="sendEmail(event)">
         <h3 class="text-[32px] font-semibold text-center mb-5">Start Booking</h3>
-        <h3 class="text-2xl font-semibold">Book Your Cleaning Service</h3>
+        <h3 class="text-[24px] font-semibold">Book Your Cleaning Service</h3>
         <p class="font-medium text-[16px] mt-2 mb-8">
           Fill out the form below and our team will confirm your appointment.
         </p>
@@ -123,20 +121,18 @@
       </div>
 
         </div>
-        <div class="flex gap-4 mt-3">
+        <div class="flex flex-col md:flex-row gap-4 mt-3">
           <div class="flex flex-col flex-1">
             <label for="date" class="text-[20px] font-medium">Preferred Date</label>
-            <input type="date" name="date" id="date" class="outline-0 mt-1 py-3 px-1.5 bg-[#F7F7FF] rounded-lg"/>
+            <input type="date" name="date" id="date" class="outline-0 mt-1 py-3 px-1.5 bg-[#F7F7FF] rounded-lg w-full"/>
           </div>
           <div class="flex flex-col flex-1">
             <label for="time" class="text-[20px] font-medium">Preferred Time</label>
-            <input type="text" placeholder="type here (ex. 9 AM)" name="time" id="time" class="outline-0 mt-1 py-3 px-1.5 bg-[#F7F7FF] rounded-lg"/>
+            <input type="text" placeholder="type here (ex. 9 AM)" name="time" id="time" class="outline-0 mt-1 py-3 px-1.5 bg-[#F7F7FF] rounded-lg w-full"/>
           </div>
         </div>
         <button type="submit" class="mt-8 w-full bg-[#2859C5] text-[#d9d9d9] text-xl font-semibold rounded-lg py-3">Confirm Booking</button>
       </form>
-      <img src="assets/icons/Mask group (1).png" alt="" class="absolute left-45 bottom-30 hidden xl:block">
-      <img src="assets/icons/Mask group.png" alt="" class="absolute right-45 bottom-10 hidden xl:block">
     </section>
     <script src="sendEmail.js"></script>
 </body>
